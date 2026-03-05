@@ -4,61 +4,60 @@
 
 下面是使用 Mermaid 语法渲染的 Elasticsearch 字段类型思维导图：
 
-```plantuml
-@startmindmap
-skinparam BackgroundColor white
-skinparam Shadowing false
-skinparam RoundCorner 10
-skinparam DefaultFontName "Microsoft YaHei"
-skinparam NodePadding 15
+```mermaid
+graph TD
+    %% 根节点
+    root((Elasticsearch 字段类型)) --> Core
+    root --> Complex
+    root --> Geo
+    root --> Special
 
-* Elasticsearch 字段类型
+    %% 核心数据类型
+    Core[核心数据类型] --> String[字符串]
+    Core --> Numeric[数字类型]
+    Core --> Date[日期类型]
+    Core --> Boolean[布尔类型 boolean]
+    Core --> Binary[二进制 binary: 默认不可搜]
 
-** 核心数据类型
-*** 字符串 (String)
-****_ text: 全文搜索，会被分词
-****_ keyword: 精确匹配，不分词
-*** 数字类型 (Numeric)
-****_ 整数: byte, integer, long等
-****_ 浮点数: float, double等
-*** 日期类型 (Date)
-****_ date: 毫秒精度
-****_ date_nanos: 纳秒精度
-*** 布尔类型
-****_ boolean: true / false
-*** 二进制 (Binary)
-****_ binary: Base64编码，默认不可搜
+    String --> text[text: 全文搜索，被分词]
+    String --> keyword[keyword: 精确匹配，不分词]
+    
+    Numeric --> int[整数: byte, integer等]
+    Numeric --> float[浮点数: float, double等]
+    
+    Date --> date[date: 毫秒精度]
+    Date --> datenano[date_nanos: 纳秒精度]
 
-** 复杂数据类型
-*** 对象类型 (Object)
-****_ 处理单层或嵌套JSON，内部打平
-*** 嵌套类型 (Nested)
-****_ Object数组版本，子对象独立文档索引
+    %% 复杂数据类型
+    Complex[复杂数据类型] --> Object[对象 object: 内部打平平铺]
+    Complex --> Nested[嵌套 nested: 子对象独立索引]
 
-left side
+    %% 地理空间数据类型
+    Geo[地理空间数据] --> Point[地理点 geo_point: 坐标对]
+    Geo --> Shape[地理形状 geo_shape: 复杂边界]
 
-** 地理空间类型
-*** 地理点 (Geo-point)
-****_ 存储经纬度坐标对，支持聚合
-*** 地理形状 (Geo-shape)
-****_ 支持点集、线段等复杂边界
+    %% 专有数据类型
+    Special[专有数据类型] --> Basic[特殊基础]
+    Special --> Rel[关系与结构]
+    Special --> AI[高级与AI检索]
 
-** 专有数据类型
-*** 特殊基础
-****_ ip: IPv4/IPv6 范围
-****_ completion: FST极速自动补全
-****_ token_count: 存储分词项数量
-****_ murmur3: 存储哈希极速去重聚合
-*** 关系与结构
-****_ join: 同一索引内建立父子关系
-****_ flattened: 平铺JSON防止映射爆炸
-****_ alias: 创建虚拟别名
-*** 高级与AI检索
-****_ dense_vector: 稠密向量KNN相似度
-****_ search_as_you_type: 提供N-gram支持边搜边输
-****_ percolator: 逆向匹配！入库查询语句
-****_ rank_feature: 依赖特效（如热度）升分
-@endmindmap
+    Basic --> ip[ip: IPv4/IPv6 范围]
+    Basic --> comp[completion: 极速自动补全]
+    Basic --> tc[token_count: 计算词项数量]
+    Basic --> m3[murmur3: 极速去重聚合]
+
+    Rel --> jn[join: 同索引父子关系]
+    Rel --> flat[flattened: 平铺以防映射爆炸]
+    Rel --> al[alias: 虚拟别名]
+
+    AI --> dv[dense_vector: 稠密向量KNN]
+    AI --> asy[search_as_you_type: 边输边搜]
+    AI --> perc[percolator: 逆向匹配查询]
+    AI --> rf[rank_feature: 特征平滑升分]
+
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px;
+    classDef rootNode fill:#f9d0c4,stroke:#333,stroke-width:2px;
+    class root rootNode;
 ```
 
 ---
