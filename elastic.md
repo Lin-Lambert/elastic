@@ -2,7 +2,7 @@
 
 ## 思维导图
 
-下面是使用 Mermaid 语法渲染的 Elasticsearch 字段类型思维导图：
+下面是使用 Mermaid 语法渲染的 Elasticsearch  字段类型思维导图：
 
 ```plantuml
 @startmindmap
