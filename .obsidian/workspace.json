@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a6ae3da6e6c92cae",
+        "id": "f3ecb5fb1d586aaa",
         "type": "tabs",
         "children": [
           {
-            "id": "ddca4e8a7a6630b7",
+            "id": "32e1a08657ec06c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 420.5
   },
   "right": {
     "id": "bcef3acb8da373fa",
@@ -156,13 +156,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "elastic9.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "elastic9 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -180,7 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 410.5
+    "width": 587.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,17 +190,25 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "782020de456fba20",
+  "active": "32e1a08657ec06c3",
   "lastOpenFiles": [
+    "elastic10.md",
+    "elastic9.md",
+    "未命名.md",
+    "2026-04-10.md",
+    "Excalidraw/Drawing 2026-04-10 23.40.12.excalidraw.md",
+    "未命名.canvas",
+    "Excalidraw",
+    "elastic.md",
+    "Excalidraw/Drawing.excalidraw.md",
     "test.puml",
     "elastic1.md",
     "elastic7.md",
     "elastic8.md",
-    "elastic.md",
-    "elastic9.md",
     "elastic2.md"
   ]
 }

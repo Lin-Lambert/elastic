@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "bpmn": {
+      "source": "markdown-viewer/skills",
+      "sourceType": "github",
+      "computedHash": "a916987175ef1a5804266fd1f64e931265ca0eec4b82f1737d7344623f1c73e8"
+    },
+    "uml": {
+      "source": "markdown-viewer/skills",
+      "sourceType": "github",
+      "computedHash": "9f11e9e19eaad8d56ec914450fc945f652abcf6de944135fb195d2f5eae212d7"
+    }
+  }
+}
